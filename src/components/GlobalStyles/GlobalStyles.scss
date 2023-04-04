@@ -7,6 +7,7 @@
     --search-top-space: 9px;
     --search-bottom-width: 52px;
     --primary: #fe2c55;
+    --white: #fff;
 
     //defaultLayout
     --default-layout-header-height: 60px;
@@ -24,6 +25,7 @@
 
 html {
     font-size: 62.5%;
+    background-color: azure;
 }
 body {
     font-family: 'Montserrat', sans-serif;
