@@ -4,7 +4,7 @@
     box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
     display: flex;
     justify-content: center;
-    background: rgb(191, 120, 120);
+    background-color: #fff;
 }
 
 .inner {
@@ -13,18 +13,25 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(18, 18, 18, 1);
+    background-color: #fff;
+    padding: 0px 24px 0 20px;
 }
 
 .logo {
     display: flex;
     align-items: center;
 }
+
+.search,
+.search-result {
+    width: 421px;
+}
+
 .search {
     position: relative;
     width: 421px;
     height: var(--search-height);
-    background-color: var(--gray-bold);
+    background-color: rgba(22, 24, 35, 0.06);
     border-radius: 92px;
     padding-left: 16px;
     display: flex;
@@ -49,7 +56,7 @@
         position: absolute;
         width: 2px;
         height: calc(var(--search-height) - var(--search-top-space) * 2);
-        background-color: #484848;
+        background-color: #fff;
         top: var(--search-top-space);
         right: var(--search-bottom-width);
     }
@@ -69,7 +76,8 @@
 .search-btn {
     width: var(--search-bottom-width);
     height: var(--search-height) -2px;
-    background-color: var(--gray-bold);
+
+    background-color: rgba(255, 255, 255, 0.04);
     border-top-right-radius: var(--search-border-radius);
     border-bottom-right-radius: var(--search-border-radius);
     font-size: 1.8rem;
@@ -77,10 +85,29 @@
 
     &:hover {
         // background-color: rgba(22, 24, 35, 0.1);
-        background-color: rgba(255, 255, 255, 0.04);
+        background-color: rgba(22, 24, 35, 0.06);
         cursor: pointer;
     }
     &:active {
         background-color: #939393;
     }
+}
+
+.search-title {
+    color: rgba(255, 255, 255, 0.5);
+    padding: 5px 12px;
+    height: 30px;
+    font-size: 1.4rem;
+    line-height: 20px;
+}
+.actions {
+    width: 270px;
+    height: 36px;
+    height: var(--search-height);
+    background-color: #fff;
+    color: blueviolet;
+    display: flex;
+    padding: 6px;
+}
+.custom-login {
 }
