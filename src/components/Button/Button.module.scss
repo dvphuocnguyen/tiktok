@@ -2,7 +2,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 100px;
+    min-width: 118px;
     padding: 8px 16px;
     border-radius: 4px;
     font-size: 1.6rem;
@@ -69,7 +69,16 @@
 }
 
 .text {
+    border: 1px solid rgba(22, 24, 35, 0.12);
     &:hover {
         text-decoration: underline;
     }
+}
+.more {
+    width: 30px;
+}
+.icon {
+    display: inline-block;
+    width: 18px;
+    text-align: center;
 }

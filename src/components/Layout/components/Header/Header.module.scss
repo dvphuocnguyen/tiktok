@@ -105,9 +105,15 @@
     height: 36px;
     height: var(--search-height);
     background-color: #fff;
-    color: blueviolet;
     display: flex;
     padding: 6px;
 }
 .custom-login {
+}
+
+.more-btn {
+    font-size: 2rem;
+    margin-left: 24px;
+    background: transparent;
+    padding: 8px;
 }
