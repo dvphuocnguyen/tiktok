@@ -2,7 +2,7 @@ import classNames from "classnames/bind";
 import styles from "./Header.module.scss"
 import images from "../../../../asset/images";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleXmark, faSpinner, faSearch, faEllipsisVertical, faPlus, faLanguage, faCircle, faCircleQuestion, faKeyboard, faToggleOff, faToggleOn } from "@fortawesome/free-solid-svg-icons";
+import { faCircleXmark, faSpinner, faSearch, faEllipsisVertical, faPlus, faLanguage, faCircleQuestion, faKeyboard, faToggleOff, faToggleOn } from "@fortawesome/free-solid-svg-icons";
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css'; // optional
 import { useEffect, useState } from "react";
@@ -14,6 +14,19 @@ import Menu from "../../../Popper/Menu";
 const MENU_ITEMS = [{
     icon: <FontAwesomeIcon icon={faLanguage} />,
     title: "Tiếng Việt",
+    children: {
+        title: 'Language',
+        data: [
+            {
+                code: 'ENG',
+                title: "English",
+            }, {
+                code: 'VIE',
+                title: "Vietnamese",
+            }
+
+        ]
+    }
 },
 {
     icon: <FontAwesomeIcon icon={faCircleQuestion} />,
@@ -33,8 +46,6 @@ const MENU_ITEMS = [{
     title: "Chế độ sáng",
 }];
 
-console.log(MENU_ITEMS);
-
 const cx = classNames.bind(styles);
 
 function Header() {
@@ -46,6 +57,11 @@ function Header() {
             setSearchResult([]);
         }, 0)
     }, [])
+
+
+    const handleMenuChange = (menuItem) => {
+        console.log(menuItem)
+    }
 
     return (<header className={cx('wrapper')}>
         <div className={cx('inner')}>
@@ -85,7 +101,7 @@ function Header() {
                     <span>Tải lên</span>
                 </Button>
                 <Button primary >Đăng nhập</Button>
-                <Menu items={MENU_ITEMS}>
+                <Menu items={MENU_ITEMS} onChange={handleMenuChange}>
                     <button className={cx('more-btn')} >
                         <FontAwesomeIcon icon={faEllipsisVertical} />
                     </button>

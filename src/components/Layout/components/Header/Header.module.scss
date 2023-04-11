@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: #fff;
-    padding: 0px 24px 0 20px;
+    padding: 0 var(--default-layout-horizontal-space);
 }
 
 .logo {
@@ -108,12 +108,14 @@
     display: flex;
     padding: 6px;
 }
-.custom-login {
-}
+// .custom-login {
+// }
 
 .more-btn {
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin-left: 24px;
     background: transparent;
     padding: 8px;
+    line-height: 1.6rem;
+    cursor: pointer;
 }
