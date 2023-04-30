@@ -7,7 +7,7 @@
     position: relative;
     width: 421px;
     height: var(--search-height);
-    background-color: rgba(22, 24, 35, 0.06);
+    background-color: rgba(0, 1, 7, 0.06);
     border-radius: 92px;
     padding-left: 16px;
     display: flex;
@@ -76,19 +76,16 @@
     font-size: 1.4rem;
     line-height: 20px;
 }
-.actions {
-    display: flex;
-    align-items: center;
-    width: 270px;
-    height: 36px;
-    height: var(--search-height);
-    background-color: #fff;
-    padding: 6px;
+
+@keyframes spinner {
+    from {
+        transform: rotate(0) translateY((-50%));
+    }
+    to {
+        transform: rotate(360deg) translateY((-50%));
+    }
 }
 
-.action-btn {
-    background-color: transparent;
-    font-size: 2rem;
-    color: #161823;
-    padding: 4px 12px;
+.loading {
+    animation: spinner 1s linear infinite;
 }

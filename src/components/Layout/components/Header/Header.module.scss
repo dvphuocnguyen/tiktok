@@ -41,3 +41,19 @@
     border-radius: 50%;
     cursor: pointer;
 }
+.actions {
+    display: flex;
+    align-items: center;
+    width: 270px;
+    height: 36px;
+    height: var(--search-height);
+    background-color: #fff;
+    padding: 6px;
+}
+
+.action-btn {
+    background-color: transparent;
+    font-size: 2rem;
+    color: #161823;
+    padding: 4px 12px;
+}
