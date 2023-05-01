@@ -22,6 +22,7 @@
         border: none;
         outline: none;
         background-color: transparent;
+        padding-right: 35px;
     }
 
     input:not(:placeholder-shown) ~ .search-btn {

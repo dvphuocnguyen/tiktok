@@ -1,13 +1,28 @@
-import classNames from "classnames/bind";
-import styles from "./Button.module.scss"
-
+import classNames from 'classnames/bind';
+import styles from './Button.module.scss';
+import PropTypes from 'prop-types';
 // import { Link } from "react-router-dom";
-
 
 const cx = classNames.bind(styles);
 
-function Button({ to, className, rightIcon, leftIcon, more = false, href, rounded = false, disabled = false, text = false, primary = false, outline = false, small = false, large = false, children, onClick, ...passProps }) {
-
+function Button({
+    to,
+    className,
+    rightIcon,
+    leftIcon,
+    more = false,
+    href,
+    rounded = false,
+    disabled = false,
+    text = false,
+    primary = false,
+    outline = false,
+    small = false,
+    large = false,
+    children,
+    onClick,
+    ...passProps
+}) {
     let Comp = 'button';
 
     const props = {
@@ -29,16 +44,46 @@ function Button({ to, className, rightIcon, leftIcon, more = false, href, rounde
         Comp = 'a';
     }
 
-    const classes = cx('wrapper', { [className]: className }, { more }, { rounded }, { disabled }, { text }, { primary }, { outline }, { small }, { large }, { rightIcon }, { leftIcon },)
+    const classes = cx(
+        'wrapper',
+        { [className]: className },
+        { more },
+        { rounded },
+        { disabled },
+        { text },
+        { primary },
+        { outline },
+        { small },
+        { large },
+        { rightIcon },
+        { leftIcon },
+    );
 
     return (
-        <Comp className={classes}{...props}>
+        <Comp className={classes} {...props}>
             {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
             <span className={cx('title')}>{children}</span>
             {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
-
         </Comp>
     );
 }
+
+Button.propTypes = {
+    to: PropTypes.string,
+    leftIcon: PropTypes.node,
+    rightIcon: PropTypes.node,
+    className: PropTypes.string,
+    href: PropTypes.string,
+    more: PropTypes.bool,
+    rounded: PropTypes.bool,
+    disabled: PropTypes.bool,
+    text: PropTypes.bool,
+    primary: PropTypes.bool,
+    outline: PropTypes.bool,
+    small: PropTypes.bool,
+    large: PropTypes.bool,
+    children: PropTypes.node.isRequired,
+    onClick: PropTypes.func,
+};
 
 export default Button;

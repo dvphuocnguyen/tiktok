@@ -140,7 +140,9 @@ function Header() {
                                 <FontAwesomeIcon icon={faPlus} />
                                 <span>Tải lên</span>
                             </Button>
-                            <Button primary>Đăng nhập</Button>
+                            <Button primary to="/">
+                                Đăng nhập
+                            </Button>
                         </>
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
