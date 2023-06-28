@@ -2,7 +2,7 @@ import classNames from 'classnames/bind';
 import styles from './Menu.module.scss';
 import Tippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css'; // optional
-import { Wrapper as PopperWrapper } from '../index';
+import { PopperWrapper } from '../index';
 import MenuItem from './MenuItem';
 import Header from './Header';
 import { useState } from 'react';

@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 
 const cx = classNames.bind(stlyes);
 
-function Wrapper({ children, className }) {
+function PopperWrapper({ children, className }) {
     return <div className={cx('wrapper', className)}>{children}</div>;
 }
 
-Wrapper.propTypes = {
-    children: PropTypes.array,
+PopperWrapper.propTypes = {
+    // children: PropTypes.object,
     className: PropTypes.string,
 };
-export default Wrapper;
+export default PopperWrapper;
